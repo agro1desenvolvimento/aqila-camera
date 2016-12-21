@@ -1,0 +1,9 @@
+repositories {
+    maven {
+      url "https://s3.amazonaws.com/repo.commonsware.com"
+    }
+}
+
+dependencies {
+  compile 'com.commonsware.cwac:cam2:0.7.2'
+}
