@@ -57,6 +57,8 @@ public class AqilaCamera extends CordovaPlugin {
                     .flashMode(FlashMode.OFF)
                     .to(new File(file))
                     .requestPermissions()
+                    .skipOrientationNormalization()
+                    .updateMediaStore()
                     .build();
 
             this.cordova.startActivityForResult(this, cameraIntent, REQUEST_CAMERA);
