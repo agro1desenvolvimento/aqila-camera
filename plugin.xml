@@ -21,7 +21,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="br.com.aqila.camera"
-    version="0.0.1">
+    version="0.0.2">
     <name>AqilaCamera</name>
     <description>Aqila CAmera</description>
     <license>Apache 2.0</license>
