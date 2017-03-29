@@ -33,6 +33,7 @@ public class AqilaCamera extends CordovaPlugin {
 
     private CallbackContext callbackContext;
     private String file;
+    private String dstPath;
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -45,7 +46,11 @@ public class AqilaCamera extends CordovaPlugin {
             this.callbackContext = callbackContext;
 
             String filepath = Environment.getExternalStorageDirectory().getPath();
-            File folder = new File(filepath, "Aqila/fotos/");
+            String dstPath = "Aqila/fotos/";
+            if (args.length() > 0) {
+                dstPath = args.getString(0);
+            }
+            File folder = new File(filepath, dstPath);
             file = folder.getAbsolutePath() + "/" + new Date().getTime() + ".jpg";
 
             Intent cameraIntent = new CameraActivity.IntentBuilder(cordova.getActivity())

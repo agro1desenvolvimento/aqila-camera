@@ -6,11 +6,9 @@ module.exports = (function() {
   var _camera = {};
 
 
-  _camera.open = function(successCallback, errorCallback, options) {
-    exec(successCallback, errorCallback,
-    'AqilaCamera', 'takePicture', []);
+  _camera.open = function(successCallback, errorCallback, dstPath) {
+    exec(successCallback, errorCallback, 'AqilaCamera', 'takePicture', [dstPath]);
   }
-
 
   return _camera;
 }());
