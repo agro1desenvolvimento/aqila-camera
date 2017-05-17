@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mateusnava/aqila-camera/issues"
   },
-  "homepage": "https://github.com/mateusnava/aqila-camera#readme"
+  "homepage": "https://github.com/mateusnava/aqila-camera#readme",
+  "cordova": {
+    "id": "aqila-camera",
+    "platforms": [
+      "android"
+    ]
+  }
 }
