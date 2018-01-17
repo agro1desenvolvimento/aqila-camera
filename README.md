@@ -1,6 +1,6 @@
 # Alternative camera plugin for apache cordova
 
-the main feature of this camera is not to close the APP by low memory.
+The main feature of this camera is not to close the APP by low memory.
 
 This plugin is just a wrapper of the https://github.com/commonsguy/cwac-cam2
 
