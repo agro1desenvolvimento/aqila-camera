@@ -45,7 +45,7 @@ public class AqilaCamera extends CordovaPlugin {
         if (action.equals("takePicture")) {
             this.callbackContext = callbackContext;
 
-            String filepath = Environment.getExternalStorageDirectory().getPath();
+            String filepath = cordova.getActivity().getApplicationContext().getFilesDir().getAbsolutePath();
             String dstPath = "Aqila/fotos/";
             if (args.length() > 0 && args.getString(0) != null && !args.getString(0).isEmpty()) {
                 dstPath = args.getString(0);
