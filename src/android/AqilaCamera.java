@@ -114,10 +114,10 @@ public class AqilaCamera extends CordovaPlugin {
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inJustDecodeBounds = false;
             Bitmap unscaledBitmap = BitmapFactory.decodeFile(file, options);
-            options.inSampleSize = calculateSampleSize(unscaledBitmap.getWidth(), unscaledBitmap.getHeight(), 1280, 720);
+            options.inSampleSize = calculateSampleSize(unscaledBitmap.getWidth(), unscaledBitmap.getHeight(), 1163, 640);
             Bitmap scaledBitmap = BitmapFactory.decodeFile(file, options);
             os = this.cordova.getActivity().getContentResolver().openOutputStream(Uri.fromFile(new File(file)));
-            scaledBitmap.compress(Bitmap.CompressFormat.JPEG, 70, os);
+            scaledBitmap.compress(Bitmap.CompressFormat.JPEG, 50, os);
         } finally {
             os.close();
         }
